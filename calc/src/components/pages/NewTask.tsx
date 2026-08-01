@@ -22,6 +22,26 @@ export default function NewTask(){
                     <textarea name="description" id="taskDescriptionInput" placeholder="Description to the task"></textarea>
                     </span>
                 </div>
+                <div className="formSelectInputs" style={{display:"grid", gridTemplateColumns: "auto auto auto"}}>
+                    <div className="box">
+                        <p>test</p>
+                    </div>
+                    <div className="box">
+                        <p>test</p>
+                    </div>
+                    <div className="box">
+                        <p>test</p>
+                    </div>
+                    <div className="box">
+                        <p>test</p>
+                    </div>
+                    <div className="box">
+                        <p>test</p>
+                    </div>
+                    <div className="box">
+                        <p>test</p>
+                    </div>
+                </div>
             </div>
         </form>
         </>
