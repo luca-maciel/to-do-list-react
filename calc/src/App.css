@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+:root{
+  --font-inter: "Inter", sans-serif;
+  --font-verdana: "Verdana", sans-serif;
+
+  --fundo-primario: #0D1117;
+  --fundo-secundario: #161B22;
+  --superficie-card: #1E242C;
+
+  --roxo-primario: #7C3AED;
+  --roxo-primario-hover: #8B5CF6;
+  --roxo-primario-ativo: #6D28D9;
+
+  --borda: #30363F;
+  --texto-primario: #E6E8EB;
+  --texto-secundario: #A1A7B3;
+  --texto-desabilitado: #6B7280;
+
+  --perigo: #EF4444;
+  --perigo-hover: #DC2626;
+
+  --input-fundo: #161B22;
+  --input-borda: #30363F;
+  --hover-item: #262D38;
+  --divisor: #2A313C;
+  --scrollBar: #3A404A;
+}
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+#root{
+  background-color: var(--fundo-primario);
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.appTitle, .formTitle, .formSubTitle, label{
+  font-family: var(--font-inter);
+  color: var(--texto-primario);
+}
+
+
+.newTaskForm{
+  background: linear-gradient(to top, var(--fundo-secundario), var(--superficie-card));
+  padding: 10px;
+  margin-top: 10px;
+  width: 90%;
+  height: 90%;
+  border: 1px solid gray;
+  border-radius: 12px;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+
+.formHead{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  border-bottom: 1px solid var(--texto-secundario);
+  padding-bottom: 10px;
+}
+.formTitle{
+  margin-top: 10px;
+  text-align: center;
+}
+
+.fa-pen-to-square{
+  color: purple;
+}
+
+.fa-x{
+  color: var(--texto-secundario);
+}
+
+label{
+  font-size: 12px;
+  color: var(--texto-desabilitado);
+}
+
+.labelStar{
+  color: var(--perigo);
+}
+
+.formInputs{
+  height: 100%;
+  width: 100%;
+}
+
+.formInputsText{
+  width: 100%;
+  height: 60px;
+}
+
+.titleArea, .descriptionArea{
+  width: 100%;
+  display: flex;
+  gap: 5px;
+  flex-direction: column;
+}
+
+
+
+
+.textInput::placeholder, textarea::placeholder{
+  color: var(--texto-secundario)
+}
+
+.textInput, textarea{
+  color: var(--texto-secundario);
+  padding-left: 10px;
+  border-radius: 4px;
+  border: 1px solid var(--input-borda);
+  outline: none;
+  width: 100%;
+  height: 30px;
+  background-color: var(--input-fundo);
+}
+
+textarea{
+  padding-top: 5px;
+  height: 40px;
+}
