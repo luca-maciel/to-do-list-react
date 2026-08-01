@@ -34,48 +34,30 @@ export default function NewTask(){
                     </div>
                     <div className="priorityBox">
                         <label htmlFor="priority">Priority</label><br />
-                        <select name="category" id="categorySelect">
-                            <option value="study">Study</option>
-                            <option value="wordk">Work</option>
-                            <option value="pessoal">Pessoal</option>
-                            <option value="other">Other</option>
+                        <select name="priority" id="prioritySelect">
+                            <option value="low">Low</option>
+                            <option value="mid">Mid</option>
+                            <option value="high">High</option>
                         </select>
                     </div>
-                    <div className="priorityBox">
-                        <label htmlFor="priority">Priority</label><br />
-                        <select name="category" id="categorySelect">
-                            <option value="study">Study</option>
-                            <option value="wordk">Work</option>
-                            <option value="pessoal">Pessoal</option>
-                            <option value="other">Other</option>
+                    <div className="statusBox">
+                        <label htmlFor="status">Status</label><br />
+                        <select name="pending" id="pendingSelect">
+                            <option value="study">Pending</option>
+                            <option value="wordk">Completed</option>
                         </select>
                     </div>
-                    <div className="priorityBox">
-                        <label htmlFor="priority">Priority</label><br />
-                        <select name="category" id="categorySelect">
-                            <option value="study">Study</option>
-                            <option value="wordk">Work</option>
-                            <option value="pessoal">Pessoal</option>
-                            <option value="other">Other</option>
-                        </select>
+                    <div className="creationDateBox">
+                        <label htmlFor="creationDate">Created at</label><br />
+                        <input type="date" className="textInput datesInput" disabled/>
                     </div>
-                    <div className="priorityBox">
-                        <label htmlFor="priority">Priority</label><br />
-                        <select name="category" id="categorySelect">
-                            <option value="study">Study</option>
-                            <option value="wordk">Work</option>
-                            <option value="pessoal">Pessoal</option>
-                            <option value="other">Other</option>
-                        </select>
+                    <div className="deadLineDateBox">
+                        <label htmlFor="deadLine">Deadline date</label><br />
+                        <input type="date" className="textInput datesInput"/>
                     </div>
-                    <div className="priorityBox">
-                        <label htmlFor="priority">Priority</label><br />
-                        <select name="category" id="categorySelect">
-                            <option value="study">Study</option>
-                            <option value="wordk">Work</option>
-                            <option value="pessoal">Pessoal</option>
-                            <option value="other">Other</option>
-                        </select>
+                    <div className="dueDateBox">
+                        <label htmlFor="dueDate">Due at</label><br />
+                        <input type="date" className="textInput datesInput" disabled/>
                     </div>
                 </div>
                 </div>
