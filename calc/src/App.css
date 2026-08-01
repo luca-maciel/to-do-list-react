@@ -96,6 +96,9 @@ label{
 .formInputs{
   height: 100%;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .formInputsText{
@@ -117,7 +120,7 @@ label{
   color: var(--texto-secundario)
 }
 
-.textInput, textarea{
+.textInput, textarea, select{
   color: var(--texto-secundario);
   padding-left: 10px;
   border-radius: 4px;
@@ -131,4 +134,20 @@ label{
 textarea{
   padding-top: 5px;
   height: 40px;
+}
+
+.formSelectInputs{
+  width: 100%;
+  height: 120px;
+  border: 1px solid red;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 8%;
+  justify-content: center;
+}
+
+select{
+  padding-left: 0;
+  height: 35px;
+  width: 117.2px;
 }

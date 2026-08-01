@@ -21,26 +21,63 @@ export default function NewTask(){
                     <label htmlFor="description">Description</label>
                     <textarea name="description" id="taskDescriptionInput" placeholder="Description to the task"></textarea>
                     </span>
+                    <br />
+                <div className="formSelectInputs">
+                    <div className="categoryBox">
+                        <label htmlFor="category">Category</label><br />
+                        <select name="category" id="categorySelect">
+                            <option value="study">Study</option>
+                            <option value="wordk">Work</option>
+                            <option value="pessoal">Pessoal</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div className="priorityBox">
+                        <label htmlFor="priority">Priority</label><br />
+                        <select name="category" id="categorySelect">
+                            <option value="study">Study</option>
+                            <option value="wordk">Work</option>
+                            <option value="pessoal">Pessoal</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div className="priorityBox">
+                        <label htmlFor="priority">Priority</label><br />
+                        <select name="category" id="categorySelect">
+                            <option value="study">Study</option>
+                            <option value="wordk">Work</option>
+                            <option value="pessoal">Pessoal</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div className="priorityBox">
+                        <label htmlFor="priority">Priority</label><br />
+                        <select name="category" id="categorySelect">
+                            <option value="study">Study</option>
+                            <option value="wordk">Work</option>
+                            <option value="pessoal">Pessoal</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div className="priorityBox">
+                        <label htmlFor="priority">Priority</label><br />
+                        <select name="category" id="categorySelect">
+                            <option value="study">Study</option>
+                            <option value="wordk">Work</option>
+                            <option value="pessoal">Pessoal</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div className="priorityBox">
+                        <label htmlFor="priority">Priority</label><br />
+                        <select name="category" id="categorySelect">
+                            <option value="study">Study</option>
+                            <option value="wordk">Work</option>
+                            <option value="pessoal">Pessoal</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
                 </div>
-                <div className="formSelectInputs" style={{display:"grid", gridTemplateColumns: "auto auto auto"}}>
-                    <div className="box">
-                        <p>test</p>
-                    </div>
-                    <div className="box">
-                        <p>test</p>
-                    </div>
-                    <div className="box">
-                        <p>test</p>
-                    </div>
-                    <div className="box">
-                        <p>test</p>
-                    </div>
-                    <div className="box">
-                        <p>test</p>
-                    </div>
-                    <div className="box">
-                        <p>test</p>
-                    </div>
                 </div>
             </div>
         </form>
