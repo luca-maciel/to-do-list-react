@@ -77,7 +77,7 @@
 }
 
 .fa-pen-to-square{
-  color: purple;
+  color: var(--roxo-primario);
 }
 
 .fa-x{
@@ -141,12 +141,82 @@ textarea{
   height: 120px;
   display: grid;
   grid-template-columns: auto auto auto;
-  gap: 8%;
-  justify-content: center;
+  gap: 2%;
+  justify-content: space-around;
+  /* align-items: start; */
 }
 
 select, .datesInput{
-  padding-left: 0;
+  text-align: center;
   height: 35px;
-  width: 117px;
+  width: 100%;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator{
+  filter: invert(27%) sepia(71%) saturate(2942%) hue-rotate(253deg) brightness(96%) contrast(96%);
+  cursor: pointer;
+}
+
+select{
+  text-align: start;
+  padding-left: 5px;
+}
+
+.slBox{
+  width: 150%;
+}
+
+.formTagsInputBox{
+    margin-top:20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--texto-secundario);
+}
+
+.tagsContainer{
+  padding-top: 10px;
+    display:grid;
+    grid-template-columns: auto auto;
+    gap:8px;
+}
+
+.tagButton{
+    border:none;
+    outline:none;
+    cursor:pointer;
+
+    padding:6px 12px;
+
+    border-radius:999px;
+
+    background:#252B36;
+    color:#B8C0CC;
+
+    font-size:13px;
+    font-weight:500;
+
+    transition:.2s;
+}
+
+.tagButton:hover{
+    background:#323B49;
+}
+
+.tagButton.selected{
+    background:#8B5CF6;
+    color:#fff;
+}
+
+
+@media (max-width: 480px) {
+  .slBox{
+    width: 80%;
+  }
+
+  .formSelectInputs{
+    overflow: scroll;
+    justify-content: space-around;
+  }
+  /* .dueDateBox, .deadLineDateBox, .creationDateBox{
+    width: 100%;
+  } */
 }

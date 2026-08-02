@@ -1,6 +1,31 @@
 import Title from "../Title";
 import Icon from '../Icon';
+import { useState } from "react";
+
+
+const tagsDisponiveis = [
+  "React",
+  "TypeScript",
+  "JavaScript",
+  "Spring Boot",
+  "Java",
+  "Python",
+  "CSS",
+  "HTML",
+];
+
 export default function NewTask(){
+
+    const [selectedTags, setSelectedTags] = useState<string[]>([]);
+
+    function toggleTag(tag: string) {
+        if (selectedTags.includes(tag)) {
+            setSelectedTags(selectedTags.filter(t => t !== tag));
+        } else {
+            setSelectedTags([...selectedTags, tag]);
+        }
+    }
+
     return(
         <>
         <Title size={2} className="formTitle" text="New task" />
@@ -23,7 +48,7 @@ export default function NewTask(){
                     </span>
                     <br />
                 <div className="formSelectInputs">
-                    <div className="categoryBox">
+                    <div className="categoryBox slBox">
                         <label htmlFor="category">Category</label><br />
                         <select name="category" id="categorySelect">
                             <option value="study">Study</option>
@@ -32,7 +57,7 @@ export default function NewTask(){
                             <option value="other">Other</option>
                         </select>
                     </div>
-                    <div className="priorityBox">
+                    <div className="priorityBox slBox">
                         <label htmlFor="priority">Priority</label><br />
                         <select name="priority" id="prioritySelect">
                             <option value="low">Low</option>
@@ -40,24 +65,42 @@ export default function NewTask(){
                             <option value="high">High</option>
                         </select>
                     </div>
-                    <div className="statusBox">
+                    <div className="statusBox slBox">
                         <label htmlFor="status">Status</label><br />
                         <select name="pending" id="pendingSelect">
                             <option value="study">Pending</option>
                             <option value="wordk">Completed</option>
                         </select>
                     </div>
-                    <div className="creationDateBox">
+                    <div className="creationDateBox slBox">
                         <label htmlFor="creationDate">Created at</label><br />
                         <input type="date" className="textInput datesInput" disabled/>
                     </div>
-                    <div className="deadLineDateBox">
+                    <div className="deadLineDateBox slBox">
                         <label htmlFor="deadLine">Deadline date</label><br />
                         <input type="date" className="textInput datesInput"/>
                     </div>
-                    <div className="dueDateBox">
+                    <div className="dueDateBox slBox">
                         <label htmlFor="dueDate">Due at</label><br />
                         <input type="date" className="textInput datesInput" disabled/>
+                    </div>
+                </div>
+                <div className="formTagsInputBox">
+                    <label>Tags</label>
+
+                    <div className="tagsContainer">
+                        {tagsDisponiveis.map(tag => (
+                            <button
+                                type="button"
+                                key={tag}
+                                className={`tagButton ${
+                                    selectedTags.includes(tag) ? "selected" : ""
+                                }`}
+                                onClick={() => toggleTag(tag)}
+                            >
+                                {tag}
+                            </button>
+                        ))}
                     </div>
                 </div>
                 </div>
